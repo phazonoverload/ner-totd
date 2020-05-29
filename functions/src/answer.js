@@ -13,6 +13,7 @@ const headers = {
 
 exports.handler = async (event, context) => {
   try {
+    console.log('answer endpoint log');
     const thoughts = await base.read({ filterByFormula: '{Today}="Yes"' })
     const ncco = [];
     if(thoughts.length > 0) {
